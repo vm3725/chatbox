@@ -1,10 +1,11 @@
+import 'AI_secrets.dart';
 import 'ChatGPTService.dart';
 import 'dart:convert';
 /**/
 class QwenBotService extends ChatGPTService{
 
-  String apiUrl = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
-  String apiKey = 'YOUR_API_KEY'; // 请替换为你的API密钥
+  String apiUrl = qwen_apiUrl;
+  String apiKey = qwen_apiKey;
   String model = 'qwen-turbo';
   @override
   String getDataContent(data) {

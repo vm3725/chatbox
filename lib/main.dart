@@ -15,7 +15,7 @@ class ChatApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ChatGPT Demo',
+      title: 'ChatBox',
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),

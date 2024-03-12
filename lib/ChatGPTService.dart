@@ -1,11 +1,12 @@
 // ChatGPT服务类
 import 'dart:convert';
+import 'package:chatbox/AI_secrets.dart';
 import 'package:http/http.dart' as http;
 
 import 'AI.dart';
 class ChatGPTService implements AI {
-  String apiUrl = 'https://chat.openai.com/v1/chat/completions';
-  String apiKey = 'YOUR_API_KEY'; // 请替换为你的API密钥
+  String apiUrl = openAi_apiUrl;
+  String apiKey = openAi_apiKey;
   String model = 'gpt-3.5-turbo';
   ChatGPTService([apiUrl,apiKey]){
     if(apiUrl != null){

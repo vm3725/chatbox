@@ -3,11 +3,12 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'AI.dart';
+import 'AI_secrets.dart';
 class ErnieBotService implements AI {
-  String apiUrl = 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions_pro';
-  String apiUrlAll = 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions_pro?access_token=[YOUR_API_KEY]]';
-  String apiTokenUrl = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=[YOUR_API_KEY]&client_secret=[YOUR_API_KEY]';
-  String apiTokenUrlAll = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=[YOUR_API_KEY]&client_secret=[YOUR_API_KEY]';
+  String apiUrl = ernie_apiUrl;
+  String apiUrlAll = ernie_apiUrlAll;
+  String apiTokenUrl = ernie_apiTokenUrl;
+  String apiTokenUrlAll = ernie_apiTokenUrl;
 
   String grant_type = '';
   String client_id = '';
